@@ -1,0 +1,22 @@
+/* pages/rule/rule.wxss */
+page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    .ruleTitle{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .rules{
+        height: 28rem;
+        margin: 2rem;
+        .ruleName{
+            margin-top: 2rem;
+        }
+    }
+    
+}

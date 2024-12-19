@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<navigation-bar title="乌鸦和白鸽" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+    <image src="../../image/首页图片.jpg"></image>
+    <view class="start">
+        <button  type="primary" class="startButton" bind:tap="onJumpGame">开始游戏</button>
+    </view>
+    <view class="rule">
+        <button class="ruleButton" bind:tap="onJumpRule">规则</button>
+    </view>
+</view>

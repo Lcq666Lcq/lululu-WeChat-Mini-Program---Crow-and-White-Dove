@@ -1,0 +1,67 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+    <navigator open-type="navigateBack" class="back-button">
+        <image src="../../image/返回.png" class="back-icon"></image>
+    </navigator>
+    <view class="round">第{{round}}轮</view>
+    <view class="players">
+        <view class="playerOne">
+            <view class="ready">
+                <icon class="icon-box-img" type="{{ readyIcon.ready }}" size="20"></icon>
+            </view>
+            <view class="picture">
+                <image src="../../image/头像1.jpg" mode=""/>
+                <view>分数：{{ grade.one }}</view>
+            </view>
+            <view class="card">
+                <image src="{{ pickCards.first }}"></image>
+            </view>
+        </view>
+        <view class="playerTow">
+            <view class="ready">
+                <icon class="icon-box-img" type="{{ readyIcon.ready }}" size="20"></icon>
+            </view>
+            <view class="picture">
+                <image src="../../image/头像2.jpg" mode=""/>
+                <view>分数：{{ grade.two }}</view>
+            </view>
+            <view class="card">
+                <image src="{{ pickCards.second }}"></image>
+            </view>
+        </view>
+        <view class="playerThree">
+            <view class="ready">
+                <icon class="icon-box-img" type="{{ readyIcon.ready }}" size="20"></icon>
+            </view>
+            <view class="picture">
+                <image src="../../image/头像3.jpg" mode=""/>
+                <view>分数：{{ grade.three }}</view>
+            </view>
+            <view class="card">
+                <image src="{{ pickCards.third }}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="host">
+        <!-- <view class="cardsPicking">
+            <image src="{{ pickCards.first }}" mode=""/>
+            <image src="{{ pickCards.second }}" mode=""/>
+        </view> -->
+        <view>
+            <radio-group bindchange="handleRadioChange" class="cardsPicking">
+                <label class="card" for="card-first">
+                    <radio id="card-first" value="first" checked="{{currentCard === 'first'}}"/>
+                    <image src="../../image/白鸽牌.png" mode="aspectFit" class="card-image"></image>
+                </label>
+                <label class="card" for="card-second">
+                    <radio id="card-second" value="second" checked="{{currentCard === 'second'}}"/>
+                    <image src="../../image/乌鸦牌.png" mode="aspectFit" class="card-image"></image>
+                </label>
+            </radio-group>
+        </view>
+        <view class="check">
+            <button type="primary" bind:tap="checkCard">确定</button>
+        </view>
+        <view class="grade">分数：{{ myGrade }}</view>
+    </view>
+</view>

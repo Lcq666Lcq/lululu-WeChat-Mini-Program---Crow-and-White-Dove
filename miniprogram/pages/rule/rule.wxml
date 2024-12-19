@@ -1,0 +1,16 @@
+<!--pages/rule/rule.wxml-->
+<view class="container">
+    <view class="ruleTitle">游戏规则</view>
+    <view class="rules">
+        <text>游戏玩家共四人。每个人拥有两张卡牌，分别是乌鸦牌和白鸽牌。每回合玩家可以选择一张牌打出。
+        <text class="ruleName" style="font-size: 30px;">得分规则：</text>
+        1.当四名玩家均为白鸽，则所有白鸽玩家+3分
+        2.当一名玩家为乌鸦，三名玩家为白鸽。乌鸦玩家+4分，白鸽玩家+1分
+        3.当两名玩家为乌鸦，两名玩家为白鸽。乌鸦玩家0分，白鸽玩家+3分。
+        4.当三名玩家为乌鸦，一名玩家为白鸽。乌鸦玩家-1分，白鸽玩家+3分。
+        5.当四名玩家均为乌鸦，则所有乌鸦玩家-2分。
+        <text class="ruleName" style="font-size: 30px;">胜利条件：</text>
+        当四个回合游戏结束后，分数最低的两名玩家淘汰。</text>
+    </view>
+    <button type="primary" bind:tap="backIndex">返回主页面</button>
+</view>
